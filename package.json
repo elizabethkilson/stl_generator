@@ -1,0 +1,26 @@
+{
+  "name": "stl",
+  "version": "1.0.0",
+  "description": "Webpage for generating files for 3D printing.",
+  "main": "js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elizabethkilson/stl_generator.git"
+  },
+  "author": "Elizabeth Kilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elizabethkilson/stl_generator/issues"
+  },
+  "homepage": "https://github.com/elizabethkilson/stl_generator#readme",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.6",
+    "tsify": "^1.0.6",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

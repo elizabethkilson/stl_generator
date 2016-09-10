@@ -3,7 +3,7 @@ import {parser, split_length} from "./utils.ts";
 
 const binaryNameLength = 80;
 
-class Object {
+export class Structure {
     surfaces: Array<Triangle>
     name: string
     count: number
@@ -13,11 +13,11 @@ class Object {
     }
     
     readBin(binStr: string) {
-        this.name = binStr.substring(0, binaryNameLength).strip();
+        this.name = binStr.substring(0, binaryNameLength).trim();
         this.count = parser.decodeInt(binStr.substring(binaryNameLength, binaryNameLength + 4), 32, false);
         let data = binStr.substring(binaryNameLength + 4, binStr.length);
         
-        let pieces = split_length(binStr, binaryTriangleSize);
+        let pieces = split_length(data, binaryTriangleSize);
         this.surfaces = pieces.map(str => new Triangle(str));
     }
     
@@ -29,7 +29,7 @@ class Object {
             out += surface.write();
         });
         
-        var bytes = new Uint8Array(out.length);
+        var bytes: Uint8Array = new Uint8Array(out.length);
         for (var i=0; i<out.length; i++) {
             bytes[i] = out.charCodeAt(i);
         }

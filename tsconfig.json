@@ -1,0 +1,13 @@
+{
+    "version": "1.5.3",
+    "files": [
+        "./src/geometry.ts",
+        "./src/main.ts",
+        "./src/stl.ts",
+        "./src/utils.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es5"
+    }
+}
